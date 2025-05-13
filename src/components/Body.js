@@ -26,7 +26,7 @@ const Body = () => {
       <h2 style={{ textAlign: "center" }}>Checkout Our Products</h2>
       <div className="item-container">
         {product_list.map((item) => {
-          return <ItemCard {...item} key={item.id} />;
+          return <ItemCard {...item} key={item.id+2} />;
         })}
       </div>
     </div>

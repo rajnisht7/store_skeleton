@@ -19,8 +19,8 @@ const Products = () => {
       </div>
       <div className="item-container">
         {
-            product_list.map((item)=>{
-                return <ItemCard {...item} key={item.id}/>
+            product_list.map((item,index)=>{
+                return <ItemCard {...item} key={index}/>
             })
         }
       </div>
