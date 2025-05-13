@@ -1,13 +1,16 @@
-import { use } from "react";
-import { home_img, product_list } from "./Constants";
+
+import { useState,useEffect } from "react";
+import { home_img } from "./Constants";
 import ItemCard from "./ItemCard";
-import { Link } from "react-router";
 import { useNavigate } from "react-router";
+import Shimmer from "./Shimmer";
+import useProducts from "../Hooks/useProducts";
 
 const Body = () => {
   const navigate = useNavigate();
+  const product_list=useProducts();
 
-  return (
+  return (product_list===null)?(<Shimmer/>) : (
     <div className="body">
       <div className="home-first">
         <img src={home_img} alt="home-image" />

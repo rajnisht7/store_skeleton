@@ -1,15 +1,16 @@
 import { useParams } from "react-router";
-import { product_list } from "./Constants";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useParams } from "react-router";
 import Reviews from "./Reviews";
+import Shimmer from "./Shimmer";
+import useProducts from "../Hooks/useProducts";
 
 const ProductPage = () => {
+  const product_list=useProducts();
   const [incart, setincart] = useState(0);
-  const [productinfo, setproductinfo] = useState(product_list);
   const { productId } = useParams();
 
-  return (
+  return (product_list===null)?(<Shimmer/>) : (
     <div className="product-page">
       <div className="small-details">
         <img src={product_list[productId].thumbnail} alt="" />

@@ -1,9 +1,13 @@
-import { product_list } from "./Constants";
+import { useState,useEffect } from "react";
 import { useParams } from "react-router";
+import Shimmer from "./Shimmer";
+import useProducts from "../Hooks/useProducts";
 
 const Reviews = () => {
   const { productId } = useParams();
-  return (
+  const product_list=useProducts();
+
+  return (product_list===null)?(<Shimmer/>) : (
     <div>
       <div className="reviews">
         <h2 style={{ textDecoration: "underline" }}>Reviews</h2>

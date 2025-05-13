@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import ItemCard from "./ItemCard";
-import { product_list } from "./Constants";
-
+import Shimmer from "./Shimmer";
+import useProducts from "../Hooks/useProducts";
 const Products = () => {
+
+  const product_list=useProducts();
+
   const [searchText, setSearchText] = useState("");
-  return (
+  return (product_list===null)?(<Shimmer/>) : (
     <div className="main-page">
       <div className="search-container">
         <input
