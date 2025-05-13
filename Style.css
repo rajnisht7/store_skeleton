@@ -198,3 +198,10 @@ margin-top: auto;
   margin: 10px;
   padding: 10px;
 }
+
+.product-description{
+  height: 200px;
+  width: 100%;
+  margin: 10px;
+  border: 1px solid black;
+}

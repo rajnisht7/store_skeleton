@@ -12,13 +12,12 @@ import TermsConditions from "./components/Terms_Conditions";
 import PrivacyPolicy from "./components/Privacy_Policy";
 import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
-
 const AppLayout = () => {
   return (
     <>
       <Header />
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };
@@ -52,14 +51,15 @@ const AppRouter = createBrowserRouter([
         path: "/privacy-policy",
         element: <PrivacyPolicy />,
       },
-            {
+      {
         path: "/products",
         element: <Products />,
       },
-                  {
+      {
         path: "/product/:productId",
         element: <ProductPage />,
       },
+
     ],
     errorElement: <ErrorPage />,
   },

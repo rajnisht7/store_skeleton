@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router";
 import Reviews from "./Reviews";
@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 import useProducts from "../Hooks/useProducts";
 
 const ProductPage = () => {
+  const navigate = useNavigate();
   const product_list=useProducts();
   const [incart, setincart] = useState(0);
   const { productId } = useParams();
@@ -21,7 +22,7 @@ const ProductPage = () => {
           <h2>{product_list[productId].warrantyInformation}</h2>
           <h2>{product_list[productId].shippingInformation}</h2>
           <h2>{product_list[productId].availabilityStatus}</h2>
-          <button>Buy Now</button>
+          <button onClick={() => navigate("/product/" + productId + "/buy")}>Buy Now</button>
           <button
             style={{ borderRoght: "none" }}
             onClick={() => {
