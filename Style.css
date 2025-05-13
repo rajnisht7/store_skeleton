@@ -1,0 +1,186 @@
+/* Header Styling */
+
+.navbar {
+  width: 100%;
+}
+
+.navbar > ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.navbar > ul > li {
+  list-style: none;
+}
+
+.navbar > ul > li > a {
+  text-decoration: none;
+}
+
+/* Footer Styling*/
+
+.Footer {
+width: 100%;
+display: flex;
+border-top: 1px solid black;
+padding-top: 10px;
+height: 100px;
+background: #f8f8f8;
+margin-top: auto;
+}
+
+.brand-details > img {
+  width: 50px;
+}
+
+.list,
+.brand-details {
+  width: 50%;
+  text-align: center;
+}
+.list > li {
+  list-style: none;
+  padding: 10px;
+}
+
+.list > li > a {
+  list-style: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.list {
+  border-right: 1px solid black;
+}
+
+/* Error Page*/
+.error-page {
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 40px;
+  background-color: cadetblue;
+}
+
+/* terms conditions and privacy policy */
+
+.terms-conditions,
+.privacy-policy {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.terms-conditions > h1,
+.privacy-policy > h1 {
+  font-weight: bold;
+}
+
+.terms-conditions > p,
+.privacy-policy > p {
+  padding-top: 50px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/*body*/
+
+.home-first > img {
+  padding: 50px;
+  margin: 10px;
+  width: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.home-first > h1 {
+  position: absolute;
+  color: white;
+  top: 30%;
+  left: 20%;
+}
+
+.home-first,
+.home-second {
+  display: flex;
+}
+
+.home-second {
+  border: 3px solid black;
+  width: 600px;
+  margin-top: 150px;
+  height: 400px;
+  margin-left: 60px;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.home-second:hover{
+  border: 5px solid black
+}
+
+.home-second > h2 {
+  padding-left: 130px;
+  padding-top: 110px;
+}
+
+.home-second > button{
+  width: 100px;
+  height: 50px;
+  margin-left: 250px;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+
+.item-container >h2{
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.item-card{
+  border: 1px solid black;
+  width: 350px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.item-card > img{
+  width: 320px;
+  padding: 10px;
+}
+
+.item-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.small-details{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.small-details > img{
+  width: 500px;
+  border: 2px solid black;
+  margin: 50px;
+}
+
+.description{
+  border-top: 1px solid black;
+}
+
+.reviews{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
